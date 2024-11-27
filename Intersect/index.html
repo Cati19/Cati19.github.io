@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charcircle="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Titel der Website -->
+  <title>Outreach Projekt Intersektionalität</title> 
+
+  <!-- Favicon, das oben im Tab des Browsers links vom Titel angezeigt wird -->
+  <link rel="icon" type="image/svg+xml" href="resources/svg/intersect-empty.svg"/>
+
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="jquery-1.8.3.js"></script>
+  <script src="js/jquery-collision.min.js"></script>
+
+  <script>
+    /* Alle Kombinationsmöglichkeiten */
+    const combinations = {
+    'sex_gender': 
+      { text: 'Super', url: './template.html' },
+    'sex_class': 
+      { text: 'Toll', url: './template.html' },
+    }
+  </script>
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <svg fill="white" width="50px" height="50px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title>chart--venn-diagram</title><path d="M20,6a9.92,9.92,0,0,0-4,.84A9.92,9.92,0,0,0,12,6a10,10,0,0,0,0,20,9.92,9.92,0,0,0,4-.84A9.92,9.92,0,0,0,20,26,10,10,0,0,0,20,6ZM12,24A8,8,0,0,1,12,8a7.91,7.91,0,0,1,1.76.2,10,10,0,0,0,0,15.6A7.91,7.91,0,0,1,12,24Zm8-8a8,8,0,0,1-4,6.92A8,8,0,0,1,16,9.08,8,8,0,0,1,20,16Zm0,8a7.91,7.91,0,0,1-1.76-.2,10,10,0,0,0,0-15.6A7.91,7.91,0,0,1,20,8a8,8,0,0,1,0,16Z"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
+      <!-- <svg fill="white" width="50px" height="50px" viewBox="0 0 256.00098 256.00098" id="Flat" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0">
+          <path d="M88,160a70.51259,70.51259,0,0,0,.73242,7.26758A70.51259,70.51259,0,0,0,96,168a71.99981,71.99981,0,0,0,72-72,70.51259,70.51259,0,0,0-.73242-7.26758A70.51259,70.51259,0,0,0,160,88,71.99981,71.99981,0,0,0,88,160Z"/>
+        </g>
+        <path d="M174.63477,81.36523a79.99168,79.99168,0,1,0-93.26954,93.26954,79.99168,79.99168,0,1,0,93.26954-93.26954ZM32,96A64.00385,64.00385,0,0,1,157.98779,80.05127,80.06522,80.06522,0,0,0,80.051,157.98779,64.1144,64.1144,0,0,1,32,96Zm128,0a64.07207,64.07207,0,0,1-64,64A64.07207,64.07207,0,0,1,160,96Zm0,128a64.11421,64.11421,0,0,1-61.98779-48.05127A80.06522,80.06522,0,0,0,175.949,98.01221,64.00389,64.00389,0,0,1,160,224Z"/>
+      </svg> -->
+      <span>Intersektionalität</span>
+    </header>
+
+
+    <section class="hero">
+      <div>
+        <h1>Weil mehr oft mehr ist</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius atque mollitia fugit fuga maiores 
+          cumque dicta quia impedit laudantium a incidunt obcaecati, vero sit ex. Eveniet facere voluptates 
+          quisquam magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius atque mollitia fugit fuga maiores 
+          cumque dicta quia impedit laudantium a incidunt obcaecati, vero sit ex. Eveniet facere voluptates 
+          quisquam magni.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius atque mollitia fugit fuga maiores 
+          cumque dicta quia impedit laudantium a incidunt obcaecati, vero sit ex. Eveniet facere voluptates 
+          quisquam magni.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius atque mollitia fugit fuga maiores 
+          cumque dicta quia impedit laudantium a incidunt obcaecati, vero sit ex. Eveniet facere voluptates 
+          quisquam magni.
+        </p>
+      </div>
+
+      <img src="resources/img/diversity.png"/>
+    </section>
+
+    <main>
+
+      <article>
+        <h1>Überschrift</h1>
+        <h2>Unterüberschrift</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt, in inventore natus cum velit culpa quod dolores dicta temporibus recusandae magnam nulla tempore exercitationem voluptatum corrupti totam deleniti! Provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, labore impedit corporis modi, quaerat ipsum nesciunt quam id quibusdam, odio sunt tenetur reiciendis adipisci explicabo atque at vel. Corporis, explicabo.</p>
+        <h2>Unterüberschrift</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt, in inventore natus cum velit culpa quod dolores dicta temporibus recusandae magnam nulla tempore exercitationem voluptatum corrupti totam deleniti! Provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque blanditiis odit in voluptatibus officia suscipit, temporibus quam cupiditate nisi obcaecati quos. Reprehenderit doloremque laboriosam in vero accusantium at non eius.</p>
+      </article>
+
+      <div class="separator"></div>
+
+      <article>
+        <h1>Überschrift</h1>
+        <h2>Unterüberschrift</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt, in inventore natus cum velit culpa quod dolores dicta temporibus recusandae magnam nulla tempore exercitationem voluptatum corrupti totam deleniti! Provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, labore impedit corporis modi, quaerat ipsum nesciunt quam id quibusdam, odio sunt tenetur reiciendis adipisci explicabo atque at vel. Corporis, explicabo.</p>
+        <h2>Unterüberschrift</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad deserunt, in inventore natus cum velit culpa quod dolores dicta temporibus recusandae magnam nulla tempore exercitationem voluptatum corrupti totam deleniti! Provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque blanditiis odit in voluptatibus officia suscipit, temporibus quam cupiditate nisi obcaecati quos. Reprehenderit doloremque laboriosam in vero accusantium at non eius.</p>
+      </article>
+
+      <div class="separator"></div>
+
+      <section class="venn">
+        <p>
+          Versuch's doch gerne selbst mal. Lass über das Dropdown Menu Kreise eines Venn-Diagramms aufploppen und bewege sie frei umher. 
+          Bei einer Kollision kann eine zutreffende Schnittstelle erscheinen.
+        </p>
+
+        <select id="div-selector">
+          <option value="" disabled selected hidden>Optionen</option>
+          <option value="sex">Sex</option>
+          <option value="gender">Gender</option>
+          <option value="race-ethnicity">Race/Ethnicity</option>
+          <option value="class">Class</option>
+          <option value="nationality">Nationality</option>
+          <option value="sexual-orientation">Sexual Orientation</option>
+          <option value="disability">Disability</option>
+        </select>
+
+        <div class="circle" id="sex" >Sex</div>
+        <div class="circle" id="gender">Gender</div>
+        <div class="circle" id="race-ethnicity">Race/Ethnicity</div>
+        <div class="circle" id="class">Class</div>
+        <div class="circle" id="nationality">Nationality</div>
+        <div class="circle" id="sexual-orientation">Sex.Orientation</div>
+        <div class="circle" id="disability">Disability</div>
+
+        <div id="intersection"></div>
+      </section>
+
+      <a href="./template.html" target="_self" >Template</a></br>
+      <a href="./template-img.html" target="_self" >Template mit Bild</a></br>
+      <a href="./template-video.html" target="_self" >Template mit Video</a></br>
+
+    </main>
+    <footer>
+
+      <div class="footer-left">
+          <span>&copy; Caterina, Gaëlle und Michèle</span>
+          <span>&nbsp; Mit technischer Unterstützung von Robin-Pascal Kohler, FHV</span>
+      </div>
+      <div class="footer-right">
+          <span>Universität Zürich, HS 2024</span>
+          <span>Seminar Soziale Gruppen, Diskriminierung und soziale Gerechtigkeit</span>
+      </div>
+      
+  </footer>
+    
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
