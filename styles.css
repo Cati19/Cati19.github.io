@@ -87,32 +87,37 @@ main {
 }
 
 .hero > .img-container {
-    width: 35%; /* The container takes 35% of the parent width */
-    overflow: hidden; /* Prevents image overflow if borders are applied */
-    text-align: center; /* Ensures the image aligns well within the container */
-    align-self:last baseline;
+    width: 35%; 
+    overflow: hidden; 
+    text-align: center; 
+    align-self: last baseline;
 }
 
 .hero > .img-container > img {
-    width: 100%; /* Image scales proportionally to the container's width */
-    height: auto; /* Maintains the image's aspect ratio */
-    display: block; /* Prevents extra spacing around the image */
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
-main > article > h1 {
-    font-size: 1.7rem;
-}
-
-main > article > h2 {
+main > article > div {
+    display: flex;
+    gap: calc(1.5*(var(--pd-lr)));
     margin-left: var(--pd-lr);
+    margin-right: var(--pd-lr);
+}
+
+main > article h1 {
+    font-size: 1.7rem;
+    margin-bottom: 0;
+}
+
+main > article h2 {
+    /* margin-left: var(--pd-lr); */
     font-size: 1.3rem;
 }
 
-main > article > p {
-    /* padding-left: calc(2*var(--pd-lr)); */
-    margin-left: var(--pd-lr);
-    /* background: linear-gradient(to bottom right, rgba(241, 170, 195, 0.15), rgba(241, 239, 240, 0.05)); */
-    /* background: radial-gradient(circle, rgba(225, 83, 130, 0.15), rgba(241, 232, 235, 0.05)); */
+main > article p {
+    text-align: justify;
 }
 
 main > .venn {
@@ -301,7 +306,6 @@ footer span {
     font-size: 0.8rem;
 }
 
-/* Anpassungen für Tablet-Ansicht */
 @media screen and (max-width: 768px){
     :root {
         --pd-lr: 1rem;
@@ -312,9 +316,12 @@ footer span {
     .hero > .img-container {
         display: none;
     }
+    main > article > div {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
-/* Anpassungen für Handy-Ansicht */
 @media screen and (max-width: 568px) {
     :root {
         --pd-lr: 0.4rem;
