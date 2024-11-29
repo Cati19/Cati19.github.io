@@ -69,30 +69,34 @@ main {
     background: linear-gradient(to top, rgba(225, 83, 130, 0.15), rgba(241, 232, 235, 0.05));
 }
 
-.hero > div {
+.hero > .intro {
     display: flex;
     flex-direction: column;
     width: 50%; 
-    /* margin: 0 auto; */
     text-align: center;
-    /* border-bottom: 1px solid black; */
 }
 
-.hero > div > h1 {
+.hero > .intro > h1 {
     text-transform: uppercase;
     color: var(--col-5);
     margin-bottom: 0;
 }
 
-.hero > div > p {
+.hero > .intro > p {
     text-align: justify;
 }
 
-.hero > img {
-    /* width: 35%; */
-    /* width: 30vw; */
-    height: auto;
-    max-width: 35%;
+.hero > .img-container {
+    width: 35%; /* The container takes 35% of the parent width */
+    overflow: hidden; /* Prevents image overflow if borders are applied */
+    text-align: center; /* Ensures the image aligns well within the container */
+    align-self:last baseline;
+}
+
+.hero > .img-container > img {
+    width: 100%; /* Image scales proportionally to the container's width */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Prevents extra spacing around the image */
 }
 
 main > article > h1 {
@@ -299,11 +303,28 @@ footer span {
 
 /* Anpassungen für Tablet-Ansicht */
 @media screen and (max-width: 768px){
-    /* ... */
+    :root {
+        --pd-lr: 1rem;
+    }
+    .hero > .intro {
+        width: 80%;
+    }
+    .hero > .img-container {
+        display: none;
+    }
 }
 
 /* Anpassungen für Handy-Ansicht */
 @media screen and (max-width: 568px) {
+    :root {
+        --pd-lr: 0.4rem;
+    }
+    .hero > .intro {
+        width: 90%;
+    }
+    /* main {
+        padding: 0 calc(0.2*var(--pd-lr));
+    } */
     main > .venn > .circle {
       width: 100px;
       height: 100px;
@@ -316,9 +337,25 @@ footer span {
     main > .venn > #div-selector {
       font-size: 14px;
     }
+    header {
+        justify-content: center;
+    }
+    .header-sub {
+        flex-direction: column;
+    }
+    .subpage {
+        width: 95%;
+    }
     footer {
         flex-direction: column;
         align-items: center;
+    }
+    footer > .footer-left {
+        align-self: flex-start;
+    }
+    footer > .footer-right {
+        margin-top: 1rem;
+        align-items: flex-start;
     }
     /* ... */
 }
