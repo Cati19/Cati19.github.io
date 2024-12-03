@@ -353,6 +353,7 @@ footer span {
     .subpage {
         width: 95%;
     }
+    /* in die tablet sicht rein */
     footer {
         flex-direction: column;
         align-items: center;
