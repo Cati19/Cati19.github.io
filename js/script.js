@@ -3,7 +3,7 @@ $(function() {
   
     function initializecircle() {
       $(".circle").draggable({
-        containment: ".venn-body",
+        containment: ".spawn",
         drag: function(event, ui) {
           checkOverlap();
         },
