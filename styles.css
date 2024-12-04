@@ -129,17 +129,35 @@ main > .venn {
     /* height: 500px; */
 }
 
-main > .venn > #div-selector {
-    /* border-radius: 5px; */
-    background-color: rgba(225, 83, 130, 0.15);
-    color: var(--bg-header);
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 16px;
+.grid-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Grid with responsive columns */
+    gap: 1rem;
+    padding: 1rem;
 }
 
-main > .venn > #div-selector option {
-    border-radius: 0;
+.option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.option:hover {
+    background-color: #efefef;
+    transform: scale(1.05);
+}
+
+.option.selected {
+    background-color: #ddd;
+    border-color: #aaa;
+}
+
+.content {
+    display: none; /* Initially hide all content */
 }
 
 main > .venn > .venn-body {
@@ -147,6 +165,7 @@ main > .venn > .venn-body {
     height: 500px;
     border-bottom-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    background-color: ghostwhite;
 }
   
 main > .venn > .venn-body > .circle {
@@ -154,6 +173,7 @@ main > .venn > .venn-body > .circle {
     height: 150px;
     color: black;
     text-align: center;
+    font-size: 0.9rem;
     line-height: 150px;
     position: absolute;
     top: 150px;

@@ -133,35 +133,33 @@
 
       <section class="venn">
         <p>
-          Versuch's doch gerne selbst mal. Lass über das Dropdown Menu Kreise eines Venn-Diagramms aufploppen und bewege sie frei umher. 
+          Versuch's doch gerne selbst mal. Lass über das Menu Kreise eines Venn-Diagramms aufploppen und bewege sie frei umher. 
           Bei einer Kollision kann eine zutreffende Schnittstelle erscheinen.
         </p>
 
-        <select id="div-selector">
-          <option value="" disabled selected hidden>Optionen</option>
-          <option value="age">Alter</option>
-          <option value="gender">soziales Geschlecht</option>
-          <option value="ethnicity">Ethnizität</option>
-          <option value="ses">SES</option>
-          <option value="sexual-orientation">Sexuelle Orientierung</option>
-          <option value="disability">Beeinträchtigung</option>
-          <option value="race">Race</option>
-          <option value="religion">Glaubenszugehörigkeit</option>
-          <option value="class">soziale Klasse</option>
-          
-        </select>
-
         <section class="venn-body">
 
+          <div class="grid-selector">
+            <div class="option" data-value="age">Alter</div>
+            <div class="option" data-value="gender">soziales Geschlecht</div>
+            <div class="option" data-value="ethnicity">Ethnizität</div>
+            <div class="option" data-value="ses">SES</div>
+            <div class="option" data-value="sexual-orientation">Sexuelle Orientierung</div>
+            <div class="option" data-value="disability">Beeinträchtigung</div>
+            <div class="option" data-value="race">Race</div>
+            <div class="option" data-value="religion">Glaubenszugehörigkeit</div>
+            <div class="option" data-value="class">soziale Klasse</div>
+          </div>
+
           <div class="circle" id="age" >Alter</div>
-          <div class="circle" id="gender">soziales Geschlecht</div>
+          <div class="circle" id="gender">Soz. Geschlecht</div>
           <div class="circle" id="ethnicity">Ethnizität</div>
           <div class="circle" id="ses">SES</div>
-          <div class="circle" id="sexual-orientation">Sex.Orientierung</div>
+          <div class="circle" id="sexual-orientation">Sex. Orientierung</div>
           <div class="circle" id="disability">Beeinträchtigung</div>
           <div class="circle" id="race">Race</div>
-          <div class="circle" id="religion">Glaubenszugehörigkeit</div>
-          <div class="circle" id="class">soziale Klasse</div>
+          <div class="circle" id="religion">Glaube</div>
+          <div class="circle" id="class">Soz. Klasse</div>
           
           <div id="intersection"></div>
         </section>

@@ -14,13 +14,19 @@ $(function() {
     }
   
     initializecircle();
-  
-    $("#div-selector").on("change", function() {
-      const selectedDiv = $("#" + $(this).val()); 
+
+    $(".option").on("click", function() {
+      const selectedValue = $(this).data("value");
+      const selectedDiv = $("#" + selectedValue); 
+
       selectedDiv.toggle();
+
+      $(this).toggleClass("selected");
+
       checkOverlap(); 
-    });
-  
+  });
+
+
     function checkOverlap() {
       const divs = $(".circle:visible"); 
       const activeIds = divs.map((_, div) => div.id).get(); 
