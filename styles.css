@@ -150,13 +150,16 @@ main > .venn > .circle {
     opacity: 0.75;
 }
 
-main > .venn > #sex { background-color: aliceblue; }
-main > .venn > #gender { background-color: khaki; }
-main > .venn > #race-ethnicity { background-color: palevioletred; }
-main > .venn > #class { background-color: lightgreen; }
-main > .venn > #nationality { background-color: rgb(82, 94, 197); }
-main > .venn > #sexual-orientation { background-color: rgb(150, 41, 101); }
-  
+main > .venn > #age { background-color: aliceblue; }
+main > .venn > #gender { background-color: rgb(231, 90, 24); }
+main > .venn > #ethnicity { background-color: palevioletred; }
+main > .venn > #ses { background-color: lightgreen; }
+main > .venn > #disability { background-color: rgb(82, 94, 197); }
+main > .venn > #sexual-orientation { background-color: rgb(206, 179, 25); }
+main > .venn > #race { background-color: rgb(31, 82, 126); }  
+main > .venn > #religion { background-color: rgb(151, 43, 70); }
+main > .venn > #class { background-color: rgb(24, 196, 226); }
+
 main > .venn > #none {
     background-image: url(resources/Flag_of_Finland.svg.png);
     background-size: cover;
