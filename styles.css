@@ -179,7 +179,7 @@ main > .venn .circle {
     font-size: 0.9rem;
     line-height: 150px;
     position: absolute;
-    top: 150px;
+    top: 250px;
     left: 50px;
     cursor: move;
     border: 1px solid black;
