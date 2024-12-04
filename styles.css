@@ -309,6 +309,12 @@ footer span {
     font-size: 0.8rem;
 }
 
+@media screen and (max-width: 1280px){
+    .subpage {
+        width: 75%;
+    }
+}
+
 @media screen and (max-width: 768px){
     :root {
         --pd-lr: 1rem;
