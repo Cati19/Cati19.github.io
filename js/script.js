@@ -3,6 +3,7 @@ $(function() {
   
     function initializecircle() {
       $(".circle").draggable({
+        containment: ".venn-body",
         drag: function(event, ui) {
           checkOverlap();
         },
@@ -20,18 +21,31 @@ $(function() {
       checkOverlap(); 
     });
   
-
     function checkOverlap() {
-      const divs = $(".circle:visible"); // Nur sichtbare Kreise
-      const activeIds = divs.map((_, div) => div.id).get(); // IDs der sichtbaren Kreise
+      const divs = $(".circle:visible"); 
+      const activeIds = divs.map((_, div) => div.id).get(); 
+      const boundingRects = Object.fromEntries(
+        activeIds.map(id => [id, document.getElementById(id).getBoundingClientRect()])
+      );
       let overlapFound = false;
     
-      // Prüfe spezifische Kombinationen
-      const hardCodedGroups = [
-        { ids: ['age', 'gender', 'race'], data: combinations['gender_age_race'] },
-        { ids: ['age', 'sexual-orientation', 'gender'], data: combinations['sexual-orientation_gender_age'] },
-        { ids: ['race', 'ethnicity', 'gender', 'age'], data: combinations['race_ethnicity_gender_age'] },
-      ];
+      for (let i = 0; i < activeIds.length; i++) {
+        for (let j = i + 1; j < activeIds.length; j++) {
+          const id1 = activeIds[i];
+          const id2 = activeIds[j];
+          const rect1 = boundingRects[id1];
+          const rect2 = boundingRects[id2];
+    
+          if (isOverlapping(rect1, rect2)) {
+            const overlapData = combinations[`${id1}_${id2}`];
+            if (overlapData) {
+              displayIntersection(overlapData, [id1, id2]);
+              overlapFound = true;
+              return; 
+            }
+          }
+        }
+      }
     
       hardCodedGroups.forEach(group => {
         if (group.ids.every(id => activeIds.includes(id))) {
@@ -41,34 +55,18 @@ $(function() {
       });
     
       if (!overlapFound) {
-        intersection.hide(); // Verstecke das Intersections-Div, wenn keine Übereinstimmung gefunden wird
+        intersection.hide();
       }
     }
-  
-  function mergeOverlappingGroups(groups) {
-      let merged = [];
-  
-      groups.forEach(group => {
-          let mergedWithExisting = false;
-  
-          // Prüfe, ob die aktuelle Gruppe mit bestehenden Gruppen verbunden werden kann
-          merged = merged.map(existingGroup => {
-              if ([...group].some(id => existingGroup.has(id))) {
-                  mergedWithExisting = true;
-                  group.forEach(id => existingGroup.add(id)); // Verbinden
-                  return existingGroup;
-              }
-              return existingGroup;
-          });
-  
-          if (!mergedWithExisting) {
-              merged.push(new Set(group));
-          }
-      });
-  
-      return merged;
-  }
-  
+
+    function isOverlapping(rect1, rect2) {
+      return (
+        rect1.left < rect2.right &&
+        rect1.right > rect2.left &&
+        rect1.top < rect2.bottom &&
+        rect1.bottom > rect2.top
+      );
+    }
   
   function displayIntersection(overlapData, group) {
     const boundingRects = group.map(id => document.getElementById(id).getBoundingClientRect());
@@ -96,9 +94,6 @@ $(function() {
     } else {
       intersection.hide();
     }
-  
-}
-
-  
+  }
 });
   

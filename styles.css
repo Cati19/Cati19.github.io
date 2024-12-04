@@ -126,26 +126,38 @@ main > article p {
 
 main > .venn {
     position: relative;
-    height: 500px;
+    /* height: 500px; */
 }
 
 main > .venn > #div-selector {
-    border-radius: 5px;
-    background-color: var(--col-4);
+    /* border-radius: 5px; */
+    background-color: rgba(225, 83, 130, 0.15);
+    color: var(--bg-header);
     margin-top: 20px;
     padding: 10px;
     font-size: 16px;
 }
+
+main > .venn > #div-selector option {
+    border-radius: 0;
+}
+
+main > .venn > .venn-body {
+    border: 1px solid black;
+    height: 500px;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
   
-main > .venn > .circle {
+main > .venn > .venn-body > .circle {
     width: 150px;
     height: 150px;
     color: black;
     text-align: center;
     line-height: 150px;
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 150px;
+    left: 50px;
     cursor: move;
     border: 1px solid black;
     border-radius: 50%;
@@ -154,29 +166,29 @@ main > .venn > .circle {
     opacity: 0.75;
 }
 
-main > .venn > #age { background-color: aliceblue; }
-main > .venn > #gender { background-color: rgb(231, 90, 24); }
-main > .venn > #ethnicity { background-color: palevioletred; }
-main > .venn > #ses { background-color: lightgreen; }
-main > .venn > #disability { background-color: rgb(82, 94, 197); }
-main > .venn > #sexual-orientation { background-color: rgb(206, 179, 25); }
-main > .venn > #race { background-color: rgb(31, 82, 126); }  
-main > .venn > #religion { background-color: rgb(151, 43, 70); }
-main > .venn > #class { background-color: rgb(24, 196, 226); }
+main > .venn > .venn-body > #age { background-color: aliceblue; }
+main > .venn > .venn-body > #gender { background-color: rgb(231, 90, 24); }
+main > .venn > .venn-body > #ethnicity { background-color: palevioletred; }
+main > .venn > .venn-body > #ses { background-color: lightgreen; }
+main > .venn > .venn-body > #disability { background-color: rgb(82, 94, 197); }
+main > .venn > .venn-body > #sexual-orientation { background-color: rgb(206, 179, 25); }
+main > .venn > .venn-body > #race { background-color: rgb(31, 82, 126); }  
+main > .venn > .venn-body > #religion { background-color: rgb(151, 43, 70); }
+main > .venn > .venn-body > #class { background-color: rgb(24, 196, 226); }
 
-main > .venn > #intersection {
+main > .venn > .venn-body > #intersection {
     position: absolute;
     display: none;
 }
 
-main > .venn > #intersection > a {
+main > .venn > .venn-body > #intersection > a {
     text-decoration: none;
     color: var(--col-5);
     font-size: 1.5rem;
     font-style: italic;
 }
 
-main > .venn > #intersection > a::after {
+main > .venn > .venn-body > #intersection > a::after {
     content: '→';
 }
 
