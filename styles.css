@@ -111,6 +111,10 @@ main > article h1 {
     margin-bottom: 0;
 }
 
+main > article > div > segment {
+    width: 50%;
+}
+
 main > article h2 {
     /* margin-left: var(--pd-lr); */
     font-size: 1.3rem;
@@ -159,13 +163,6 @@ main > .venn > #sexual-orientation { background-color: rgb(206, 179, 25); }
 main > .venn > #race { background-color: rgb(31, 82, 126); }  
 main > .venn > #religion { background-color: rgb(151, 43, 70); }
 main > .venn > #class { background-color: rgb(24, 196, 226); }
-
-main > .venn > #none {
-    background-image: url(resources/Flag_of_Finland.svg.png);
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
 
 main > .venn > #intersection {
     position: absolute;
@@ -264,14 +261,12 @@ main > .venn > #intersection > a::after {
 }
 
 iframe {
-    /* align-self: center; */
     width: 100%;
-    aspect-ratio: 16 / 9; /* Seitenverhältnis für YouTube */
+    aspect-ratio: 16 / 9; 
     border: none;
-    border-radius: 1rem; /* Gleiche Abrundung wie das übergeordnete Div */
+    border-radius: 1rem; 
     position: relative;
-    z-index: 1; /* Hebt das Video über die Maske */
-    /* box-shadow: inset 0px 0px 20px rgba(255, 255, 255, 0.5); */
+    z-index: 1; 
     mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0.3) 100%);
     -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0.3) 100%);
     mask-repeat: no-repeat;
@@ -296,7 +291,6 @@ footer {
 footer > .footer-left {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 footer > .footer-right {
@@ -315,19 +309,43 @@ footer span {
     }
 }
 
-@media screen and (max-width: 768px){
-    :root {
-        --pd-lr: 1rem;
-    }
+@media screen and (max-width: 1080px){
     .hero > .intro {
         width: 80%;
     }
     .hero > .img-container {
         display: none;
     }
+    .subpage {
+        width: 85%;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer > .footer-left {
+        align-self: flex-start;
+    }
+    footer > .footer-right {
+        margin-top: 1rem;
+        align-self: flex-start;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 768px){
+    :root {
+        --pd-lr: 1rem;
+    }
     main > article > div {
         flex-direction: column;
         gap: 0;
+    }
+    main > article > div > segment {
+        width: 100%;
+    }
+    .subpage {
+        width: 90%;
     }
 }
 
@@ -361,20 +379,14 @@ footer span {
     }
     .subpage {
         width: 95%;
-    }
-    /* in die tablet sicht rein */
-    footer {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
-    footer > .footer-left {
-        align-self: flex-start;
+    .subpage .abstract {
+        text-align: left;
     }
-    footer > .footer-right {
-        margin-top: 1rem;
-        align-items: flex-start;
-    }
-    /* ... */
 }
   
 
