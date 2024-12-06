@@ -189,10 +189,10 @@ main > .venn .circle {
     opacity: 0.75;
 }
 
-main > .venn #age { background-color: aliceblue; }
+main > .venn #age { background-color: rgb(231, 9, 165); }
 main > .venn #gender { background-color: rgb(231, 90, 24); }
-main > .venn #ethnicity { background-color: palevioletred; }
-main > .venn #ses { background-color: lightgreen; }
+main > .venn #ethnicity { background-color: rgb(37, 197, 131); }
+main > .venn #ses { background-color: rgb(37, 65, 37); }
 main > .venn #disability { background-color: rgb(82, 94, 197); }
 main > .venn #sexual-orientation { background-color: rgb(206, 179, 25); }
 main > .venn #race { background-color: rgb(31, 82, 126); }  
@@ -216,7 +216,7 @@ main > .venn #intersection > a::after {
 }
 
 .separator {
-    background-color: gray;
+    background-color: white;
     padding: 1px 0;
     width: 100%;
     margin: 1rem auto;
