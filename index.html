@@ -20,7 +20,7 @@
     /* Alle Kombinationsmöglichkeiten */
     const combinations = {
     'age_sexual-orientation': 
-      { text: 'Studie 1',  url: 'intersection/age-orientation.html' },
+      { text: 'Studie 1',  url: 'intersection/age-orientation-video.html' },
     'age_religion': 
       { text: 'Studie 2',   url: 'intersection/age-religion.html' },
     'ethnicity_disability': 
@@ -49,7 +49,7 @@
       { text: 'Toll',   url: 'intersection/race-gender-ses.html' },
     'ethnicity_gender_class': 
       { text: 'Super',  url: 'intersection/ethnicity-gender-class.html' },
-      'gender_ethnicity_race': 
+    'gender_ethnicity_race': 
       { text: 'Super',  url: 'intersection/gender-ethnicity-race.html' },
     
     }
@@ -61,6 +61,10 @@
           data: combinations['sexual-orientation_gender_age'] },
       {   ids: ['race', 'ethnicity', 'gender', 'age'], 
           data: combinations['race_ethnicity_gender_age'] },
+      // TODO
+      //   Hier alle restlichen dreier und vierer Überlappungen ergänzen
+      //   Reihenfolge von ids ist egal
+      //   der combinations Eintrag bei data muss genau so heißen wie oben in den Zeilen 21-50, also am besten copy pasten
     ];
   </script>
 
@@ -128,6 +132,7 @@
             <div class="option" data-value="class">soziale Klasse</div>
           </div>
 
+
           <div class="separator" style="width:95%; margin-top: 0;"></div>
           <section class="spawn">
 
@@ -150,7 +155,7 @@
       <a href="template/template.html" target="_self" >Template</a></br>
       <a href="template/template-img.html" target="_self" >Template mit Bild</a></br>
       <a href="template/template-video.html" target="_self" >Template mit Video</a></br>
-      <a href="allestudien.html" target="_self" >Alle Studien</a></br>
+      <a href="list.html" target="_self" >Alle Studien</a></br>
 
     </main>
     <footer>
