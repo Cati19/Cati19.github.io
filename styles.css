@@ -424,6 +424,9 @@ footer span {
     .hero > .img-container {
         display: none;
     }
+    .grid-selector {
+        grid-template-columns: repeat(3, 1fr); 
+    }
     .subpage {
         width: 85%;
     }
@@ -467,6 +470,9 @@ footer span {
     /* main {
         padding: 0 calc(0.2*var(--pd-lr));
     } */
+    .grid-selector {
+        grid-template-columns: repeat(2, 1fr); 
+    }
     main > .venn > .circle {
       width: 100px;
       height: 100px;
