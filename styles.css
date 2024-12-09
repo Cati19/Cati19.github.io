@@ -134,9 +134,6 @@ main > .venn {
     /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
     grid-template-columns: repeat(5, 1fr); 
     grid-template-rows: auto auto; 
-    /* grid-template-areas:
-    "item1 item2 item3 item4 item5"
-    "item6 item7 . item8 item9";  */
     gap: 1rem;
     padding: 1rem;
 }
@@ -160,16 +157,6 @@ main > .venn {
     background-color: #ddd;
     border-color: #aaa;
 }
-
-/* .option:nth-child(1) { grid-area: item1; }
-.option:nth-child(2) { grid-area: item2; }
-.option:nth-child(3) { grid-area: item3; }
-.option:nth-child(4) { grid-area: item4; }
-.option:nth-child(5) { grid-area: item5; }
-.option:nth-child(6) { grid-area: item6; }
-.option:nth-child(7) { grid-area: item7; }
-.option:nth-child(8) { grid-area: item8; }
-.option:nth-child(9) { grid-area: item9; } */
 
 main > .venn > .venn-body {
     border: 1px solid black;
@@ -250,14 +237,13 @@ main > .venn .circle {
     content: '↗';
 } */
 
-.page-list a {
+/* .page-list a {
     color: var(--bg-header);
 }
 
-/* ToDo: Farbschema für alle a tags definieren */
 .page-list a:hover {
     color: lightcoral;
-}
+} */
 
 .page-list a::before {
     content: '⇥ ';
@@ -295,6 +281,14 @@ main > .venn #intersection > a::after {
     width: 100%;
     margin: 1rem auto;
     border-radius: 1rem;
+}
+
+main a {
+    color: var(--bg-header) !important; 
+}
+
+main a:hover {
+    color: lightcoral !important;
 }
 
 /* subpages */
@@ -383,6 +377,21 @@ iframe {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: cover;
+}
+
+.subpage .mindmap {
+    width: 100%; 
+    overflow: hidden; 
+    text-align: center; 
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.subpage .mindmap > img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
 footer {
