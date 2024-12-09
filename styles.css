@@ -501,7 +501,16 @@ footer span {
     .subpage .abstract {
         text-align: left;
     }
+
+    /* evtl. problematisch? */
+    .subpage {
+        align-items: flex-start;
+    }
 }
   
-
+@media screen and (max-width: 350px){
+    .grid-selector {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
   
