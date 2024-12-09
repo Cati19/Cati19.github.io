@@ -501,6 +501,9 @@ footer span {
     .subpage .abstract {
         text-align: left;
     }
+    .abstract-title, .video-title, .abstract-author, .video-creator, .page-list .author {
+        margin-left: 0;
+    }
 
     /* evtl. problematisch? */
     .subpage {
