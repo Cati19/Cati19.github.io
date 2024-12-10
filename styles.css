@@ -394,6 +394,11 @@ iframe {
     display: block; 
 }
 
+.subpage .mindmap > .caption {
+    padding-top: 0.5rem;
+    border-top: 1px solid black;
+}
+
 footer {
     display: flex;
     flex-direction: row;
@@ -401,7 +406,7 @@ footer {
     align-items: center; 
     width: 100%;
     background-color: var(--bg-footer);
-    padding: 1rem var(--pd-lr);
+    padding: 1.5rem var(--pd-lr);
     box-sizing: border-box;
 }
 
