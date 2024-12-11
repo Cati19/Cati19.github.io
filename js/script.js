@@ -1,3 +1,26 @@
+$(document).ready(function() {
+  function adjustTextBasedOnWidth() {
+      if ($(window).width() <= 647) { // Bildschirmbreite, bei der der Text angepasst werden soll
+          $('.option[data-value="disability"]').html('Beein-trächtigung');
+          $('.option[data-value="gender"]').html('Geschlechts-identität');
+          $('.option[data-value="religion"]').html('Glaubens-zugehörigkeit');
+      } else {
+          $('.option[data-value="disability"]').text('Beeinträchtigung');
+          $('.option[data-value="gender"]').text('Geschlechtsidentität');
+          $('.option[data-value="religion"]').text('Glaubenszugehörigkeit');
+      }
+  }
+
+  // Initiale Ausführung
+  adjustTextBasedOnWidth();
+
+  // Neu berechnen, wenn das Fenster skaliert wird
+  $(window).resize(function() {
+      adjustTextBasedOnWidth();
+  });
+});
+
+
 $(function() {
     const intersection = $("#intersection");
   
