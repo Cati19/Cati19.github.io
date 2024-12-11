@@ -233,20 +233,16 @@ main > .venn .circle {
     left: 90px;
 }
 
-/* .page-list a::after {
-    content: '↗';
-} */
-
-/* .page-list a {
-    color: var(--bg-header);
+.page-list a {
+    align-self: flex-start;
 }
-
-.page-list a:hover {
-    color: lightcoral;
-} */
 
 .page-list a::before {
     content: '⇥ ';
+}
+
+.page-list section + div {
+    text-align: left;
 }
 
 main #age { background-color: rgb(231, 9, 165); }
