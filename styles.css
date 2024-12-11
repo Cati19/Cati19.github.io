@@ -256,7 +256,7 @@ main > .venn .circle {
 
 /* ToDo: Farbschema für alle a tags definieren */
 .page-list a:hover {
-    color: lightcoral;
+    color: rgb(137, 178, 224);
 }
 
 .page-list a::before {
