@@ -17,7 +17,6 @@
   <script src="js/jquery-collision.min.js"></script>
 
   <script>
-    /* Alle Kombinationsmöglichkeiten */
     const combinations = {
     'age_sexual-orientation': 
       { text: 'Studie 1',  url: 'intersection/age-orientation-video.html' },
@@ -55,13 +54,13 @@
 
     const hardCodedGroups = [
       {   ids: ['age', 'gender', 'race'], 
-          data: combinations['gender_age_race'] },
+          data: combinations['gender_age_race'] }, 
       {   ids: ['age', 'sexual-orientation', 'gender'], 
           data: combinations['sexual-orientation_gender_age'] },
       {   ids: ['race', 'ethnicity', 'gender', 'age'], 
           data: combinations['race_ethnicity_gender_age'] },
       {   ids: ['ethnicity', 'gender', 'class'],
-          data: combinations['ethnicity_gender_class']},
+          data: combinations['ethnicity_gender_class']}, 
       {   ids: ['gender', 'ethnicity', 'race'],
           data: combinations['gender_ethnicity_race']},
       {   ids: ['sexual-orientation', 'gender', 'age', 'ethnicity'],
@@ -168,7 +167,6 @@
           wie beispielsweise Haarstruktur oder Hautfarbe kategorisiert. Der Begriff "SES" meint den sozioökonomischen Status, dh. Bildung, Beruf und Einkommen.
         </span>
       </div>
-      
 
       <!-- Debug -->
       <div class="separator" style="margin-top: 5rem;"></div>

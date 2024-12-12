@@ -46,59 +46,60 @@ $(function() {
       checkOverlap(); 
   });
 
-
-    function checkOverlap() {
-      const divs = $(".circle:visible"); 
-      const activeIds = divs.map((_, div) => div.id).get(); 
-      const boundingRects = Object.fromEntries(
-        activeIds.map(id => [id, document.getElementById(id).getBoundingClientRect()])
-      );
-      let overlapFound = false;
-
-
-      // TODO!!
-      hardCodedGroups.forEach(group => {
-        if (group.ids.every(id => activeIds.includes(id))) {
+  function checkOverlap() {
+    const divs = $(".circle:visible"); 
+    const activeIds = divs.map((_, div) => div.id).get(); 
+    const boundingRects = Object.fromEntries(
+      activeIds.map(id => [id, document.getElementById(id).getBoundingClientRect()])
+    );
+    let overlapFound = false;
+  
+    hardCodedGroups.forEach(group => {
+      if (group.ids.every(id => activeIds.includes(id))) {
+        const allRectsOverlap = group.ids.every((id1, _, ids) => 
+          ids.every(id2 => id1 === id2 || isOverlapping(boundingRects[id1], boundingRects[id2]))
+        );
+        if (allRectsOverlap) {
           displayIntersection(group.data, group.ids);
           overlapFound = true;
+          return; 
         }
-      });
-    
-      // if (!overlapFound){
-      for (let i = 0; i < activeIds.length; i++) {
-        for (let j = i + 1; j < activeIds.length; j++) {
-          const id1 = activeIds[i];
-          const id2 = activeIds[j];
-          const rect1 = boundingRects[id1];
-          const rect2 = boundingRects[id2];
-    
-          if (isOverlapping(rect1, rect2)) {
-            const overlapData = combinations[`${id1}_${id2}`];
-            if (overlapData) {
-              displayIntersection(overlapData, [id1, id2]);
-              overlapFound = true;
-              return; 
-            }
+      }
+    });
+  
+    if (overlapFound) return; 
+  
+    for (let i = 0; i < activeIds.length; i++) {
+      for (let j = i + 1; j < activeIds.length; j++) {
+        const id1 = activeIds[i];
+        const id2 = activeIds[j];
+        const rect1 = boundingRects[id1];
+        const rect2 = boundingRects[id2];
+  
+        if (isOverlapping(rect1, rect2)) {
+          const overlapData = combinations[`${id1}_${id2}`];
+          if (overlapData) {
+            displayIntersection(overlapData, [id1, id2]);
+            overlapFound = true;
+            return; 
           }
         }
       }
-    // }
-    
-
-    
-      if (!overlapFound) {
-        intersection.hide();
-      }
     }
-
-    function isOverlapping(rect1, rect2) {
-      return (
-        rect1.left < rect2.right &&
-        rect1.right > rect2.left &&
-        rect1.top < rect2.bottom &&
-        rect1.bottom > rect2.top
-      );
+  
+    if (!overlapFound) {
+      intersection.hide();
     }
+  }
+
+  function isOverlapping(rect1, rect2) {
+    return (
+      rect1.left < rect2.right &&
+      rect1.right > rect2.left &&
+      rect1.top < rect2.bottom &&
+      rect1.bottom > rect2.top
+    );
+  }
   
   function displayIntersection(overlapData, group) {
     const boundingRects = group.map(id => document.getElementById(id).getBoundingClientRect());
