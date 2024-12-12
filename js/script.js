@@ -121,7 +121,8 @@ $(function() {
       intersection.css({
         left: `${overlapCenterX - intersectionWidth / 2}px`,
         top: `${overlapCenterY - intersectionHeight / 2}px`,
-        transform: "translate(-50%, -50%)"
+        // transform: "translate(-200%, -700%)"
+        transform: "translate(-2vw, -12vw)"
       });
     } else {
       intersection.hide();
