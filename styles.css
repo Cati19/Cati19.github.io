@@ -2,7 +2,8 @@
     /* random Hintergrundfarben */
     --bg-header: #182ca4;
     --bg-body: white;
-    --bg-footer: #E8E8E4;
+    --bg-footer: #182ca4;
+    /* --bg-footer: #E8E8E4; */
 
     /* random Farbschema für den Inhalt */
     --col-1: #CDB4DB;
@@ -68,7 +69,7 @@ main {
     justify-content: center;
     gap: 2rem;
     /* background: linear-gradient(to top, rgba(225, 83, 130, 0.15), rgba(241, 232, 235, 0.05)); */
-    background: linear-gradient(to top, rgba(37, 67, 236, 0.15), rgba(51, 59, 128, 0.342));
+    background: linear-gradient(to top, rgba(24, 55, 234, 0.2), rgba(61, 79, 236, 0.08));
 }
 
 .hero > .intro {
@@ -90,6 +91,7 @@ main {
 
 .hero > .img-container {
     width: 35%; 
+    max-width: 400px;
     overflow: hidden; 
     text-align: center; 
     align-self: last baseline;
@@ -128,7 +130,6 @@ main > article p {
 
 main > .venn {
     position: relative;
-    /* height: 500px; */
 }
 
 .grid-selector {
@@ -162,13 +163,14 @@ main > .venn {
 
 main > .venn > .venn-body {
     border: 1px solid black;
-    /* height: 500px; */
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    background-color: ghostwhite;
+    /* background-color: ghostwhite; */
+    background: linear-gradient(to top, rgba(24, 55, 234, 0.15), rgba(61, 79, 236, 0.05));
 }
 
 main > .venn .spawn {
+    position: relative;
     height: 500px;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
@@ -183,8 +185,8 @@ main > .venn .circle {
     font-size: 0.9rem;
     line-height: 150px;
     position: absolute;
-    top: 250px;
-    left: 50px;
+    top: 10px;
+    left: 10px;
     cursor: move;
     border: 1px solid black;
     border-radius: 50%;
@@ -240,7 +242,6 @@ main > .venn .circle {
     color: var(--bg-header);
 }
 
-/* ToDo: Farbschema für alle a tags definieren */
 .page-list a:hover {
     color: rgb(137, 178, 224);
 }
@@ -283,6 +284,7 @@ main > .infobox {
     border: 1px solid black;
     margin-top: 1rem;
     padding: 0.5rem; 
+    /* width: 80%; */
 }
 
 main > .infobox > span > span {
@@ -422,6 +424,7 @@ footer {
     background-color: var(--bg-footer);
     padding: 1.5rem var(--pd-lr);
     box-sizing: border-box;
+    color: white;
 }
 
 footer > .footer-left {
