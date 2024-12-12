@@ -1,6 +1,6 @@
 $(document).ready(function() {
   function adjustTextBasedOnWidth() {
-      if ($(window).width() <= 647) { // Bildschirmbreite, bei der der Text angepasst werden soll
+      if ($(window).width() <= 647) { 
           $('.option[data-value="disability"]').html('Beein-trächtigung');
           $('.option[data-value="gender"]').html('Geschlechts-identität');
           $('.option[data-value="religion"]').html('Glaubens-zugehörigkeit');
@@ -10,11 +10,8 @@ $(document).ready(function() {
           $('.option[data-value="religion"]').text('Glaubenszugehörigkeit');
       }
   }
-
-  // Initiale Ausführung
   adjustTextBasedOnWidth();
 
-  // Neu berechnen, wenn das Fenster skaliert wird
   $(window).resize(function() {
       adjustTextBasedOnWidth();
   });
@@ -57,7 +54,17 @@ $(function() {
         activeIds.map(id => [id, document.getElementById(id).getBoundingClientRect()])
       );
       let overlapFound = false;
+
+
+      // TODO!!
+      hardCodedGroups.forEach(group => {
+        if (group.ids.every(id => activeIds.includes(id))) {
+          displayIntersection(group.data, group.ids);
+          overlapFound = true;
+        }
+      });
     
+      // if (!overlapFound){
       for (let i = 0; i < activeIds.length; i++) {
         for (let j = i + 1; j < activeIds.length; j++) {
           const id1 = activeIds[i];
@@ -75,13 +82,9 @@ $(function() {
           }
         }
       }
+    // }
     
-      hardCodedGroups.forEach(group => {
-        if (group.ids.every(id => activeIds.includes(id))) {
-          displayIntersection(group.data, group.ids);
-          overlapFound = true;
-        }
-      });
+
     
       if (!overlapFound) {
         intersection.hide();
@@ -100,7 +103,6 @@ $(function() {
   function displayIntersection(overlapData, group) {
     const boundingRects = group.map(id => document.getElementById(id).getBoundingClientRect());
   
-    // Berechne die gemeinsame Überlappung
     const overlapLeft = Math.max(...boundingRects.map(rect => rect.left));
     const overlapTop = Math.max(...boundingRects.map(rect => rect.top));
     const overlapRight = Math.min(...boundingRects.map(rect => rect.right));

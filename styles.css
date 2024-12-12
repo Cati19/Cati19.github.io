@@ -46,6 +46,7 @@ header {
     align-items: center;
     padding: 1rem var(--pd-lr);
     background-color: var(--bg-header);
+    /* background: linear-gradient(to bottom, #182ca4, #e0e3f1); */
 }
 
 header span {
@@ -66,7 +67,8 @@ main {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    background: linear-gradient(to top, rgba(225, 83, 130, 0.15), rgba(241, 232, 235, 0.05));
+    /* background: linear-gradient(to top, rgba(225, 83, 130, 0.15), rgba(241, 232, 235, 0.05)); */
+    background: linear-gradient(to top, rgba(37, 67, 236, 0.15), rgba(51, 59, 128, 0.342));
 }
 
 .hero > .intro {
@@ -241,7 +243,6 @@ main > .venn .circle {
 /* ToDo: Farbschema für alle a tags definieren */
 .page-list a:hover {
     color: rgb(137, 178, 224);
-
 }
 
 .page-list a::before {
@@ -276,6 +277,16 @@ main > .venn #intersection > a {
 
 main > .venn #intersection > a::after {
     content: '→';
+}
+
+main > .infobox {
+    border: 1px solid black;
+    margin-top: 1rem;
+    padding: 0.5rem; 
+}
+
+main > .infobox > span > span {
+    font-weight: bold;
 }
 
 .separator {

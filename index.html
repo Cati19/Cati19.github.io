@@ -21,37 +21,36 @@
     const combinations = {
     'age_sexual-orientation': 
       { text: 'Studie 1',  url: 'intersection/age-orientation-video.html' },
-    'age_religion': 
-      { text: 'Studie 2',   url: 'intersection/age-religion.html' },
+    // 'age_religion': 
+    //   { text: 'Studie 2',   url: 'intersection/age-religion.html' },
     'ethnicity_disability': 
-      { text: 'Studie 3',    url: 'intersection/ethnicity-disability.html' },
+      { text: 'Studie 2',    url: 'intersection/ethnicity-disability.html' },
     'ethnicity_gender': 
-      { text: 'Studie 4',   url: 'intersection/ethnicity-gender.html' },
+      { text: 'Studie 3',   url: 'intersection/ethnicity-gender.html' },
     'ethnicity_ses': 
-      { text: 'Oha',    url: 'intersection/ethnicity-ses.html' },
+      { text: 'Studie 4',    url: 'intersection/ethnicity-ses.html' },
     'gender_age_race': 
-      { text: 'Boah',   url: 'intersection/gender-age-race.html' },
+      { text: 'Studie 5',   url: 'intersection/gender-age-race.html' },
     'gender_sexual-orientation': 
-      { text: 'Super',  url: 'intersection/gender-orientation.html' },
+      { text: 'Studie 6',  url: 'intersection/gender-orientation.html' },
     'sexual-orientation_disability': 
-      { text: 'Toll',   url: 'intersection/orientation-disability.html' },
+      { text: 'Studie 7',   url: 'intersection/orientation-disability.html' },
     'sexual-orientation_gender_age_ethnicity': 
-      { text: 'Toll',   url: 'intersection/orientation-gender-age-ethnicity.html' },
+      { text: 'Studie 8',   url: 'intersection/orientation-gender-age-ethnicity.html' },
     'sexual-orientation_gender_age': 
-      { text: 'Toll',   url: 'intersection/orientation-gender-age.html' },
+      { text: 'Studie 9',   url: 'intersection/orientation-gender-age.html' },
     'sexual-orientation_religion': 
-      { text: 'Toll',   url: 'intersection/orientation-religion.html' },
-    'sexual-orientation_ses': 
-      { text: 'Toll',   url: 'intersection/orientation-ses.html' },
+      { text: 'Studie 10',   url: 'intersection/orientation-religion.html' },
+    'ses_sexual-orientation': 
+      { text: 'Studie 11',   url: 'intersection/orientation-ses-img.html' },
     'race_ethnicity_gender_age': 
-      { text: 'Toll',   url: 'intersection/race-ethnicity-gender-age-img.html' },
+      { text: 'Studie 12',   url: 'intersection/race-ethnicity-gender-age-img.html' },
     'race_gender_ses': 
-      { text: 'Toll',   url: 'intersection/race-gender-ses.html' },
+      { text: 'Studie 13',   url: 'intersection/race-gender-ses.html' },
     'ethnicity_gender_class': 
-      { text: 'Super',  url: 'intersection/ethnicity-gender-class.html' },
+      { text: 'Studie 14',  url: 'intersection/ethnicity-gender-class.html' },
     'gender_ethnicity_race': 
-      { text: 'Super',  url: 'intersection/gender-ethnicity-race.html' },
-    
+      { text: 'Studie 15',  url: 'intersection/gender-ethnicity-race.html' },
     }
 
     const hardCodedGroups = [
@@ -61,10 +60,16 @@
           data: combinations['sexual-orientation_gender_age'] },
       {   ids: ['race', 'ethnicity', 'gender', 'age'], 
           data: combinations['race_ethnicity_gender_age'] },
-      // TODO
-      //   Hier alle restlichen dreier und vierer Überlappungen ergänzen
-      //   Reihenfolge von ids ist egal
-      //   der combinations Eintrag bei data muss genau so heißen wie oben in den Zeilen 21-50, also am besten copy pasten
+      {   ids: ['ethnicity', 'gender', 'class'],
+          data: combinations['ethnicity_gender_class']},
+      {   ids: ['gender', 'ethnicity', 'race'],
+          data: combinations['gender_ethnicity_race']},
+      {   ids: ['sexual-orientation', 'gender', 'age', 'ethnicity'],
+          data: combinations['sexual-orientation_gender_age_ethnicity']},
+      {   ids: ['race', 'gender', 'ses'],
+          data: combinations['race_gender_ses']},
+      // {   ids: ['', '', ''],
+      //     data: combinations['']},
     ];
   </script>
 
@@ -151,10 +156,27 @@
         </section>
       </section>
 
+
+      <div class="infobox"> 
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11V17C11.25 17.4142 11.5858 17.75 12 17.75Z" fill="#1C274C"/>
+        <path d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z" fill="#1C274C"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 12C1.25 6.06294 6.06294 1.25 12 1.25C17.9371 1.25 22.75 6.06294 22.75 12C22.75 17.9371 17.9371 22.75 12 22.75C6.06294 22.75 1.25 17.9371 1.25 12ZM12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75Z" fill="#1C274C"/>
+        </svg>
+        <span>
+          <span>Anmerkungen</span>: Der Begriff "Race" bezieht sich auf ein soziales Konstrukt, das Menschen auf Basis von körperlichen Merkmalen
+          wie beispielsweise Haarstruktur oder Hautfarbe kategorisiert. Der Begriff "SES" meint den sozioökonomischen Status, dh. Bildung, Beruf und Einkommen.
+        </span>
+      </div>
+      
+
+      <!-- Debug -->
+      <div class="separator" style="margin-top: 5rem;"></div>
       <a href="template/template.html" target="_self" >Template</a></br>
       <a href="template/template-img.html" target="_self" >Template mit Bild</a></br>
       <a href="template/template-video.html" target="_self" >Template mit Video</a></br>
       <a href="list.html" target="_self" >Alle Studien</a></br>
+      <div class="separator" style="margin-bottom: 5rem;"></div>
 
     </main>
     <footer>
