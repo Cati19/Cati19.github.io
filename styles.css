@@ -165,8 +165,8 @@ main > .venn > .venn-body {
     border: 1px solid black;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    /* background-color: ghostwhite; */
-    background: linear-gradient(to top, rgba(24, 55, 234, 0.15), rgba(61, 79, 236, 0.05));
+    /* background: linear-gradient(to top, rgba(24, 55, 234, 0.15), rgba(61, 79, 236, 0.05)); */
+    background: radial-gradient(circle, rgba(61, 79, 236, 0.08) 60%, rgba(61, 79, 236, 0.12) 80%);
 }
 
 main > .venn .spawn {
@@ -284,6 +284,7 @@ main > .infobox {
     border: 1px solid black;
     margin-top: 1rem;
     padding: 0.5rem; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
     /* width: 80%; */
 }
 
