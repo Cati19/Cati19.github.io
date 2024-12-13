@@ -24,32 +24,26 @@
     //   { text: 'Studie 2',   url: 'intersection/age-religion.html' },
     'ethnicity_disability': 
       { text: 'Studie 2',    url: 'intersection/ethnicity-disability.html' },
-    'ethnicity_gender': 
-      { text: 'Studie 3',   url: 'intersection/ethnicity-gender.html' },
-    'ethnicity_ses': 
-      { text: 'Studie 4',    url: 'intersection/ethnicity-ses.html' },
-    'gender_age_race': 
-      { text: 'Studie 5',   url: 'intersection/gender-age-race.html' },
-    'gender_sexual-orientation': 
-      { text: 'Studie 6',  url: 'intersection/gender-orientation.html' },
+    'gender_ethnicity':
+      { text: 'Studie 3',   url: 'intersection/gender-ethnicity.html' },
+    'gender_sexual-orientation_ethnicity': 
+      { text: 'Studie 4',  url: 'intersection/gender-orientation-ethnicity.html' },
     'sexual-orientation_disability': 
-      { text: 'Studie 7',   url: 'intersection/orientation-disability.html' },
+      { text: 'Studie 5',   url: 'intersection/orientation-disability.html' },
     'sexual-orientation_gender_age_ethnicity': 
-      { text: 'Studie 8',   url: 'intersection/orientation-gender-age-ethnicity.html' },
+      { text: 'Studie 6',   url: 'intersection/orientation-gender-age-ethnicity.html' },
     'sexual-orientation_gender_age': 
-      { text: 'Studie 9',   url: 'intersection/orientation-gender-age.html' },
+      { text: 'Studie 7',   url: 'intersection/orientation-gender-age.html' },
     'sexual-orientation_religion': 
-      { text: 'Studie 10',   url: 'intersection/orientation-religion.html' },
-    'ses_sexual-orientation': 
-      { text: 'Studie 11',   url: 'intersection/orientation-ses-img.html' },
+      { text: 'Studie 8',   url: 'intersection/orientation-religion.html' },
+    ' ses-sexual-orientation': 
+      { text: 'Studie 9',   url: 'intersection/ses-orientation.html' },
     'race_ethnicity_gender_age': 
-      { text: 'Studie 12',   url: 'intersection/race-ethnicity-gender-age-img.html' },
+      { text: 'Studie 10',   url: 'intersection/race-ethnicity-gender-age.html' },
     'race_gender_ses': 
-      { text: 'Studie 13',   url: 'intersection/race-gender-ses.html' },
+      { text: 'Studie 11',   url: 'intersection/race-gender-ses.html' },
     'ethnicity_gender_class': 
-      { text: 'Studie 14',  url: 'intersection/ethnicity-gender-class.html' },
-    'gender_ethnicity_race': 
-      { text: 'Studie 15',  url: 'intersection/gender-ethnicity-race.html' },
+      { text: 'Studie 12',  url: 'intersection/ethnicity-gender-class.html' },
     }
 
     const hardCodedGroups = [
@@ -65,6 +59,8 @@
           data: combinations['gender_ethnicity_race']},
       {   ids: ['sexual-orientation', 'gender', 'age', 'ethnicity'],
           data: combinations['sexual-orientation_gender_age_ethnicity']},
+       {   ids: ['gender', 'sexual-orientation', 'ethnicity'],
+          data: combinations['gender-orientation-ethnicity']},
       {   ids: ['race', 'gender', 'ses'],
           data: combinations['race_gender_ses']},
       // {   ids: ['', '', ''],
