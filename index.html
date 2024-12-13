@@ -20,8 +20,6 @@
     const combinations = {
     'age_sexual-orientation': 
       { text: 'Studie 1',  url: 'intersection/age-orientation-video.html' },
-    // 'age_religion': 
-    //   { text: 'Studie 2',   url: 'intersection/age-religion.html' },
     'ethnicity_disability': 
       { text: 'Studie 2',    url: 'intersection/ethnicity-disability.html' },
     'gender_ethnicity':
@@ -36,7 +34,7 @@
       { text: 'Studie 7',   url: 'intersection/orientation-gender-age.html' },
     'sexual-orientation_religion': 
       { text: 'Studie 8',   url: 'intersection/orientation-religion.html' },
-    ' ses-sexual-orientation': 
+    'ses_sexual-orientation': 
       { text: 'Studie 9',   url: 'intersection/ses-orientation.html' },
     'race_ethnicity_gender_age': 
       { text: 'Studie 10',   url: 'intersection/race-ethnicity-gender-age.html' },
@@ -47,24 +45,22 @@
     }
 
     const hardCodedGroups = [
-      {   ids: ['age', 'gender', 'race'], 
-          data: combinations['gender_age_race'] }, 
+      // {   ids: ['age', 'gender', 'race'], 
+      //     data: combinations['gender_age_race'] }, 
       {   ids: ['age', 'sexual-orientation', 'gender'], 
           data: combinations['sexual-orientation_gender_age'] },
       {   ids: ['race', 'ethnicity', 'gender', 'age'], 
           data: combinations['race_ethnicity_gender_age'] },
       {   ids: ['ethnicity', 'gender', 'class'],
           data: combinations['ethnicity_gender_class']}, 
-      {   ids: ['gender', 'ethnicity', 'race'],
-          data: combinations['gender_ethnicity_race']},
+      // {   ids: ['gender', 'ethnicity', 'race'],
+      //     data: combinations['gender_ethnicity_race']},
       {   ids: ['sexual-orientation', 'gender', 'age', 'ethnicity'],
           data: combinations['sexual-orientation_gender_age_ethnicity']},
-       {   ids: ['gender', 'sexual-orientation', 'ethnicity'],
-          data: combinations['gender-orientation-ethnicity']},
+      {   ids: ['gender', 'sexual-orientation', 'ethnicity'],
+          data: combinations['gender_sexual-orientation_ethnicity']},
       {   ids: ['race', 'gender', 'ses'],
           data: combinations['race_gender_ses']},
-      // {   ids: ['', '', ''],
-      //     data: combinations['']},
     ];
   </script>
 
@@ -130,7 +126,6 @@
             <div class="option" data-value="religion">Glaubenszugehörigkeit</div>
             <div class="option" data-value="class">soziale Klasse</div>
           </div>
-
 
           <div class="separator" style="width:95%; margin-top: 0;"></div>
           <section class="spawn">
