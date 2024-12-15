@@ -201,6 +201,10 @@ main > .venn .circle {
     margin-top: 1rem;
 }
 
+.page-list h2 {
+    margin-bottom: 0.2rem;
+}
+
 .page-list section > .circle {
     width: 150px;
     height: 150px;
@@ -217,9 +221,19 @@ main > .venn .circle {
     opacity: 0.75;
 }
 
+.page-list section > .circle-left {
+    top: 25px;
+    left: 0px;
+}
+
 .page-list section > .circle-top-left {
     top: 0px;
     left: 0px;
+}
+
+.page-list section > .circle-right {
+    top: 25px;
+    left: 100px;
 }
 
 .page-list section > .circle-bottom-right {
@@ -235,6 +249,11 @@ main > .venn .circle {
 .page-list section > .circle-top-right {
     top: 20px;
     left: 90px;
+}
+
+.page-list section > .circle-top {
+    top: -18px;
+    left: 50px;
 }
 
 .page-list a {
@@ -298,6 +317,12 @@ main > .infobox > span > span {
     width: 100%;
     margin: 1rem auto;
     border-radius: 1rem;
+}
+
+.list-separator {
+    margin-top: 3rem; 
+    /* width: 80%; */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(250, 245, 245, 0.15));
 }
 
 main a {
@@ -517,6 +542,9 @@ footer span {
     main > .venn > #div-selector {
       font-size: 14px;
     }
+    p {
+        text-align: left !important;
+    }
     header {
         justify-content: center;
     }
@@ -529,6 +557,15 @@ footer span {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    .subpage h1 {
+        font-size: 1.5rem;
+    }
+    .subpage h2 {
+        font-size: 1.2rem;
+    }
+    .subpage a {
+        font-size: 0.8rem;
     }
     .subpage .abstract {
         text-align: left;

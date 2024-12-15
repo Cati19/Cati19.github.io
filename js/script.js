@@ -118,15 +118,32 @@ $(function() {
       const intersectionWidth = intersection.outerWidth();
       const intersectionHeight = intersection.outerHeight();
   
+      let offsetX = 0;
+      let offsetY = 0;
+
+      if (window.innerWidth < 450) {
+        offsetX = 10; 
+        offsetY = -230;
+      } else if (window.innerWidth < 768) {
+        offsetX = 10; 
+        offsetY = -170;
+      } else if (window.innerWidth < 1200) {
+        offsetX = 0;
+        offsetY = -180;
+      } else {
+        offsetX = -70;
+        offsetY = -160;
+      }
+  
       intersection.css({
-        left: `${overlapCenterX - intersectionWidth / 2}px`,
-        top: `${overlapCenterY - intersectionHeight / 2}px`,
-        // transform: "translate(-200%, -700%)"
-        transform: "translate(-2vw, -12vw)"
+        left: `${overlapCenterX - intersectionWidth / 2 + offsetX}px`,
+        top: `${overlapCenterY - intersectionHeight / 2 + offsetY}px`,
+        transform: "none" 
       });
     } else {
       intersection.hide();
     }
   }
+
 });
   
